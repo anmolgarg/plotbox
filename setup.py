@@ -14,7 +14,7 @@ config = {
     'name': 'plotbox',
     'version': __version__,
     'author': 'Anmol Garg',
-    'author_email': 'agarg@teslamotors.com',
+    'author_email': 'anmolgarg314@gmail.com',
     'description': 'Plotting library with a common API for static and interactive visualization',
     'license': 'MIT',
     'keywords': 'plotting visualization interactive',
@@ -33,5 +33,4 @@ config = {
     'scripts': [],
 }
 
-print 'Installing PlotBox.'
 setup(**config)

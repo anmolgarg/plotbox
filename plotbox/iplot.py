@@ -9,33 +9,13 @@ import plotly
 import plotly.plotly as py
 import plotly.graph_objs as go
 
-def plotly_plot(
-        x=None,
-        y=None,
-        df=None,
-        style='scatter',
-        title=None,
-        filename='plotly_plot_test',
-        xlabel=None,
-        ylabel=None,
-        vlines=None,
-        hlines=None,
-        xlim=(
-            None,
-            None),
-    ylim=(
-            None,
-            None),
-        dropna=True,
-        dateextractX=False,
-        dateextractY=False,
-        figsize=(
-            16,
-            9),
-        plotlyplot=True,
-        saveAs=None,
-        **kwargs):
-    '''plotly_plot uses plotly to interactively plot a series or two
+def plotly_plot(x=None, y=None, df=None, style='scatter', 
+    title=None, filename='plotly_plot_test', xlabel=None, ylabel=None, 
+    vlines=None, hlines=None, xlim=(None, None), ylim=(None, None), 
+    dropna=True, dateextractX=False, dateextractY=False, figsize=(16, 9), 
+    plotlyplot=True, saveAs=None, **kwargs):
+    '''
+    plotly_plot uses plotly to interactively plot a series or two
     Must set unique title or filename for plot to exist semi-permanently, else overwritten on the next use of function
 
     Parameters
@@ -70,7 +50,9 @@ def plotly_plot(
     To Do
     -----
     Fix autolabeling. broked it when fixing dates..
-    Bug hunt'''
+    Bug hunt
+
+    '''
 
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(1, 1, 1)

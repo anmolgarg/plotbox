@@ -2,9 +2,7 @@ Installation
 ====================================================================================================
 
 ### Prerequisites
-* Numpy
-* Pandas
-* Matplotlib
+* The usual Python data stack: NumPy, Pandas, and Matplotlib
 * Seaborn
 * Plotly
 
