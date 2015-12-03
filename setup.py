@@ -23,7 +23,7 @@ config = {
     'description': 'Plotting library with a common API for static and interactive visualization',
     'license': 'MIT',
     'keywords': 'plotting visualization interactive',
-    'url': '',
+    'url': 'https://github.com/anmolgarg/plotbox',
     'packages': find_packages(),
     'long_description': read('README.txt'),
     'install_requires': [
@@ -33,7 +33,7 @@ config = {
         'seaborn',
         'plotly',
     ], 
-    'package_data': {'plotbox' : ['../README.md']}
+    'package_data': {'plotbox' : ['../README.md']},
     'dependency_links': [],
     'scripts': [],
 }
