@@ -29,8 +29,11 @@ config = {
         'plotly',
     ], 
     'package_data': {'plotbox' : ['../README.md']},
+    'classifiers': [
+        "Development Status :: 2 - Pre-Alpha",
+    ],
     'dependency_links': [],
-    'scripts': [],
+    'scripts': []
 }
 
 setup(**config)
