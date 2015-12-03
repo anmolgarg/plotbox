@@ -19,7 +19,7 @@ sudo pip install plotbox
 <b>build from source</b>
 
 ```sh
-git clone plotbox
+git clone https://github.com/anmolgarg/plotbox.git
 cd plotbox
 sudo python setup.py install
 ```

@@ -1,18 +1,13 @@
 # -*- coding: utf-8 -*-
-import datetime as dt
+import numpy as np
 import pandas as pd
 
-from matplotlib import cm
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+import seaborn as sns
 
+import plotly
 import plotly.plotly as py
-from plotly.graph_objs import *
-from plotly import tools
-
-import numpy as np
-from scipy.stats import norm
-from scipy.stats import gaussian_kde
+import plotly.graph_objs as go
 
 def plotly_plot(
         x=None,
