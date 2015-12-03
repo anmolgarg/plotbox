@@ -30,7 +30,8 @@ config = {
     ], 
     'package_data': {'plotbox' : ['../README.md']},
     'classifiers': [
-        "Development Status :: 2 - Pre-Alpha",
+        'Development Status :: 2 - Pre-Alpha',
+        'Topic :: Scientific/Engineering :: Visualization',
     ],
     'dependency_links': [],
     'scripts': []
