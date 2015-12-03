@@ -1,10 +1,6 @@
 import os
 import sys
-
-try:
-    from setuptools import setup, find_packages
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup, find_packages
 
 # Utility function to read the README file used for the long_description
 def read(fname):
@@ -12,8 +8,7 @@ def read(fname):
 
 # Get current version from plotbox.version.py
 exec(compile(open('plotbox/version.py').read(),
-                  'plotbox/version.py', 'exec'))
-
+             'plotbox/version.py', 'exec'))
 
 config = {
     'name': 'plotbox',
@@ -25,7 +20,7 @@ config = {
     'keywords': 'plotting visualization interactive',
     'url': 'https://github.com/anmolgarg/plotbox',
     'packages': find_packages(),
-    'long_description': read('README.txt'),
+    'long_description': read('README.md'),
     'install_requires': [
         'matplotlib',
         'numpy',
@@ -39,5 +34,4 @@ config = {
 }
 
 print 'Installing PlotBox.'
-print 'Installing dependencies.'
 setup(**config)
