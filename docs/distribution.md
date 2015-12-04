@@ -7,8 +7,8 @@ Versioning is handled manually in plotbox. We follow the rules of [Semantic Vers
 
 ### To upload to pypi
 1. Check library installation works
-2. Create distribution sdist and bdist_wheel
-3. Use twine to upload to pypi (skip existing builds on pypi)
+2. Create sdist and bdist_wheel distributions
+3. Use twine to upload to pypi and skip any existing build
 
 ```sh
 sudo python setup.py install
