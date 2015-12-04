@@ -1,4 +1,3 @@
-from nose.tools import *
 
 def setup():
     print "SETUP!"
