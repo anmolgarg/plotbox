@@ -285,22 +285,16 @@ def scatter_plot(
             regression on given data.
 
 
-    Examples
+    ToDo
     --------
+    Add arguments:
 
-    .. plot:: pyplots/scatter_plot.py
-                    :include-source:
+    * dropna : boolean, optional
+    Drop missing values from the data before plotting.
 
-    .. todo::
-
-            Add arguments:
-
-            * dropna : boolean, optional
-            Drop missing values from the data before plotting.
-
-            * add regression :
-            f, popt, pcov = rp.statBox.regression_model(x,y, model)
-            plt.plot(np.linspace(0,max(x)+100,50), f(np.linspace(0,max(x)+100,50), *popt), 'r-', label="Fitted Curve")
+    * add regression :
+    f, popt, pcov = rp.statBox.regression_model(x,y, model)
+    plt.plot(np.linspace(0,max(x)+100,50), f(np.linspace(0,max(x)+100,50), *popt), 'r-', label="Fitted Curve")
 
 
     Notes

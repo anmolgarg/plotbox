@@ -14,9 +14,10 @@ def plotly_plot(x=None, y=None, df=None, style='scatter',
     vlines=None, hlines=None, xlim=(None, None), ylim=(None, None), 
     dropna=True, dateextractX=False, dateextractY=False, figsize=(16, 9), 
     plotlyplot=True, saveAs=None, **kwargs):
-    '''
-    plotly_plot uses plotly to interactively plot a series or two
-    Must set unique title or filename for plot to exist semi-permanently, else overwritten on the next use of function
+    '''Interactively plots a series or two in plotly. 
+
+    Must set unique `title` or `filename` for plot to exist semi-permanently, 
+    else overwritten on the next use of function.
 
     Parameters
     ----------
@@ -47,10 +48,13 @@ def plotly_plot(x=None, y=None, df=None, style='scatter',
     kwargs : dict
             additional keyworded arguments passed to plotting functions
 
-    To Do
+    Returns
+    -------
+    iframe : iframe
+
+    Notes
     -----
-    Fix autolabeling. broked it when fixing dates..
-    Bug hunt
+    ToDo - Fix autolabeling. broked it when fixing dates..
 
     '''
 

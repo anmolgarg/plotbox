@@ -7,8 +7,8 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 # Get current version from plotbox.version.py
-exec(compile(open('plotbox/version.py').read(),
-             'plotbox/version.py', 'exec'))
+exec(compile(open('plotbox/_version.py').read(),
+             'plotbox/_version.py', 'exec'))
 
 config = {
     'name': 'plotbox',
@@ -20,7 +20,7 @@ config = {
     'keywords': 'plotting visualization interactive',
     'url': 'https://github.com/anmolgarg/plotbox',
     'packages': find_packages(),
-    'long_description': read('README.md'),
+    'long_description': read('README.rst'),
     'install_requires': [
         'matplotlib',
         'numpy',
@@ -28,7 +28,7 @@ config = {
         'seaborn',
         'plotly',
     ], 
-    'package_data': {'plotbox' : ['../README.md']},
+    'package_data': {'plotbox' : ['../README.rst']},
     'classifiers': [
         'Development Status :: 2 - Pre-Alpha',
         'Topic :: Scientific/Engineering :: Visualization',

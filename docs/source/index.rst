@@ -1,6 +1,7 @@
 Welcome to the PlotBox Documentation
 ====================================
 
+.. include:: ../../README.rst
 
 Guide
 ^^^^^
@@ -15,8 +16,8 @@ Contents
    :maxdepth: 2
    
    installation
+   modules
    distribution
-
 
 
 Indices and tables
@@ -25,4 +26,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
