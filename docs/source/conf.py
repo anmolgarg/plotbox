@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 # Mock some things for READTHEDOCS because rtd can't build things that depend on C
 # this code grabbed from http://read-the-docs.readthedocs.org/en/latest/faq.html
-from mock import MagicMock
+from mock import Mock as MagicMock
 
 class Mock(MagicMock):
     @classmethod
