@@ -29,9 +29,12 @@ Versioning is handled manually in plotbox. We follow the rules of [Semantic Vers
 
 1. Run setup
 2. Cd docs/ and run makehtml to build modules.rst and build documentation
+3. Commit and push to github for readthedocs.org to update
 
 .. code:: sh
 
 	sudo python setup.py install
 	cd docs
 	sudo python makehtml.py
+	git commit -a -m 'updated docs'
+	git push

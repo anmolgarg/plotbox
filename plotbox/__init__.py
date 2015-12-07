@@ -2,4 +2,4 @@ import plot
 import iplot
 import movie
 
-from .version import __version__
+from ._version import __version__
