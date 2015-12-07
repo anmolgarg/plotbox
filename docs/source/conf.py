@@ -25,12 +25,12 @@ sys.path.insert(0, os.path.abspath('../..'))
 try:
     from unittest.mock import MagicMock
 except:
-    from mock import Mock as MagicMock
+    from mock import MagicMock
 
 class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
-            return Mock()
+        return Mock()
 
 MOCK_MODULES = ['numpy', 'pandas', 'matplotlib', 'matplotlib.pyplot']
 sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
