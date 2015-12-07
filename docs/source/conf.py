@@ -22,17 +22,14 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 # Mock some things for READTHEDOCS because rtd can't build things that depend on C
 # this code grabbed from http://read-the-docs.readthedocs.org/en/latest/faq.html
-try:
-    from unittest.mock import MagicMock
-except:
-    from mock import MagicMock
+from mock import MagicMock
 
 class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
         return Mock()
 
-MOCK_MODULES = ['numpy', 'pandas', 'matplotlib', 'matplotlib.pyplot']
+MOCK_MODULES = ['matplotlib', 'matplotlib.pyplot', 'numpy', 'pandas']
 sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
 
 

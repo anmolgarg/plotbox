@@ -23,10 +23,10 @@ config = {
     'long_description': read('README.rst'),
     'install_requires': [
         'matplotlib',
-        # 'numpy',
-        # 'pandas',
-        # 'seaborn',
-        # 'plotly',
+        'numpy',
+        'pandas',
+        'seaborn',
+        'plotly',
     ], 
     'package_data': {'plotbox' : ['../README.rst']},
     'classifiers': [
