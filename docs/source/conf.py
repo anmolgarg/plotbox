@@ -33,7 +33,7 @@ MOCK_MODULES = ['numpy',
                 'pandas', 
                 'matplotlib', 'matplotlib.pyplot', 
                 'seaborn', 
-                'plotly', 'plotly.plotly', 'plotly.graphobjs']
+                'plotly', 'plotly.plotly', 'plotly.graph_objs']
 sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
 
 
