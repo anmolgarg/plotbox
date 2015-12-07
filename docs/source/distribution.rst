@@ -7,7 +7,6 @@ Versioning is handled manually in plotbox. We follow the rules of [Semantic Vers
 ---------------------------------------
 
 1. Edit plotbox/plotbox/version.py
-2. Edit plotbox/docs/source/conf.py
 
 
 **To upload to PyPI**
