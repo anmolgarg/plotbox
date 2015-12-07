@@ -20,6 +20,24 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('../..'))
 
+# Mock some things for READTHEDOCS
+# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if on_rtd:
+  try:
+      from unittest.mock import MagicMock
+  except:
+      from mock import Mock as MagicMock
+
+  class Mock(MagicMock):
+      @classmethod
+      def __getattr__(cls, name):
+              return Mock()
+
+  MOCK_MODULES = ['numpy', 'pandas', 'matplotlib', 'matplotlib.pyplot']
+  sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
+
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -30,9 +48,6 @@ sys.path.insert(0, os.path.abspath('../..'))
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
     'sphinx.ext.napoleon'
 ]
 
@@ -293,7 +308,7 @@ texinfo_documents = [
 intersphinx_mapping = {'https://docs.python.org/': None}
 
 
-# use RTFD theme locally
+# use READTHEDOCS theme locally
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
