@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # import matplotlib.path as path
 # import matplotlib.animation as animation
 
-from IPython.display import HTML
+# from IPython.display import HTML
 
 def to_html(anim, fps = 15):
     '''

@@ -29,7 +29,11 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
         return Mock()
 
-MOCK_MODULES = ['numpy', 'pandas', 'matplotlib', 'matplotlib.pyplot', 'seaborn', 'plotly']
+MOCK_MODULES = ['numpy', 
+                'pandas', 
+                'matplotlib', 'matplotlib.pyplot', 
+                'seaborn', 
+                'plotly', 'plotly.plotly', 'plotly.graphobjs']
 sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
 
 
