@@ -20,22 +20,20 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('../..'))
 
-# Mock some things for READTHEDOCS
-# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-if on_rtd:
-  try:
-      from unittest.mock import MagicMock
-  except:
-      from mock import Mock as MagicMock
+# Mock some things for READTHEDOCS because rtd can't build things that depend on C
+# on_rtd is whether we are on readthedocs.org
+# this code grabbed from http://read-the-docs.readthedocs.org/en/latest/faq.html
+# on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+# if on_rtd:
+from mock import Mock as MagicMock
 
-  class Mock(MagicMock):
-      @classmethod
-      def __getattr__(cls, name):
-              return Mock()
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+            return Mock()
 
-  MOCK_MODULES = ['numpy', 'pandas', 'matplotlib', 'matplotlib.pyplot']
-  sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
+MOCK_MODULES = ['numpy', 'pandas', 'matplotlib', 'matplotlib.pyplot']
+sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
 
 
 # -- General configuration ------------------------------------------------
