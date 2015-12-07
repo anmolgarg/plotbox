@@ -21,11 +21,11 @@ import os
 sys.path.insert(0, os.path.abspath('../..'))
 
 # Mock some things for READTHEDOCS because rtd can't build things that depend on C
-# on_rtd is whether we are on readthedocs.org
 # this code grabbed from http://read-the-docs.readthedocs.org/en/latest/faq.html
-# on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-# if on_rtd:
-from mock import Mock as MagicMock
+try:
+    from unittest.mock import MagicMock
+except:
+    from mock import Mock as MagicMock
 
 class Mock(MagicMock):
     @classmethod

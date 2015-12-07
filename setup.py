@@ -22,9 +22,9 @@ config = {
     'packages': find_packages(),
     'long_description': read('README.rst'),
     'install_requires': [
-        'matplotlib',
-        'numpy',
-        'pandas',
+        # 'matplotlib',
+        # 'numpy',
+        # 'pandas',
         'seaborn',
         'plotly',
     ], 
