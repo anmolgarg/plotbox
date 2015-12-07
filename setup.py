@@ -25,8 +25,8 @@ config = {
         # 'matplotlib',
         # 'numpy',
         # 'pandas',
-        'seaborn',
-        'plotly',
+        # 'seaborn',
+        # 'plotly',
     ], 
     'package_data': {'plotbox' : ['../README.rst']},
     'classifiers': [
