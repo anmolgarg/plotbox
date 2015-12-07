@@ -301,23 +301,23 @@ def scatter_plot(
     -----
     This function can be used in 2 different ways:
 
-            * Using the arguments to generate titles, legends, etc... and then save/display the plot
+    * Using the arguments to generate titles, legends, etc... and then save/display the plot
 
-            * Incorporate the plot in a script and overriding the plotting features this way:
+    * Incorporate the plot in a script and overriding the plotting features this way:
 
-                    >>> import matplotlib.pyplot as plt
-                    >>>
-                    >>> f = 1000
-                    >>> hue = ['one' for i in range(50*f)] + ['two' for i in range(30*f)] + ['three' for i in range(20*f)]
-                    >>> rp.plotBox.scatter_plot(x = np.random.randn(100*f), y = np.random.randn(100*f), hue = hue, vlines = 0, alpha= .1, hlines = 0)
-                    >>> plt.title('My title')
-                    >>> plt.xlabel('X label I want')
-                    >>>
-                    >>> # To change the figure size :
-                    >>> fig = plt.gcf()	# get the figure object
-                    >>> fig.set_size_inches(5,10)
-                    >>>
-                    >>> plt.show()
+        >>> import matplotlib.pyplot as plt
+        >>>
+        >>> f = 1000
+        >>> hue = ['one' for i in range(50*f)] + ['two' for i in range(30*f)] + ['three' for i in range(20*f)]
+        >>> rp.plotBox.scatter_plot(x = np.random.randn(100*f), y = np.random.randn(100*f), hue = hue, vlines = 0, alpha= .1, hlines = 0)
+        >>> plt.title('My title')
+        >>> plt.xlabel('X label I want')
+        >>>
+        >>> # To change the figure size :
+        >>> fig = plt.gcf()	# get the figure object
+        >>> fig.set_size_inches(5,10)
+        >>>
+        >>> plt.show()
 
     '''
 
