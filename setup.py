@@ -6,9 +6,8 @@ from setuptools import setup, find_packages
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-# Get current version from plotbox.version.py
-exec(compile(open('plotbox/_version.py').read(),
-             'plotbox/_version.py', 'exec'))
+# get version from plotbox/plotbox/_version.py
+exec(open('plotbox/_version.py').read())
 
 config = {
     'name': 'plotbox',

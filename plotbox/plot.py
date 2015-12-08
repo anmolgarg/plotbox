@@ -10,7 +10,7 @@ import plotly
 import plotly.plotly as py
 import plotly.graph_objs as go
 
-from .utils import df_to_arrays, arrays_to_df
+from utils import df_to_arrays, arrays_to_df
 
 sns.set_style('whitegrid')
 
@@ -284,19 +284,6 @@ def scatter_plot(
     model : str, optional
             regression on given data.
 
-
-    ToDo
-    --------
-    Add arguments:
-
-    * dropna : boolean, optional
-    Drop missing values from the data before plotting.
-
-    * add regression :
-    f, popt, pcov = rp.statBox.regression_model(x,y, model)
-    plt.plot(np.linspace(0,max(x)+100,50), f(np.linspace(0,max(x)+100,50), *popt), 'r-', label="Fitted Curve")
-
-
     Notes
     -----
     This function can be used in 2 different ways:
@@ -318,6 +305,14 @@ def scatter_plot(
         >>> fig.set_size_inches(5,10)
         >>>
         >>> plt.show()
+
+    Add arguments:
+    * dropna : boolean, optional
+    Drop missing values from the data before plotting.
+
+    * add regression :
+    f, popt, pcov = rp.statBox.regression_model(x,y, model)
+    plt.plot(np.linspace(0,max(x)+100,50), f(np.linspace(0,max(x)+100,50), *popt), 'r-', label="Fitted Curve")
 
     '''
 

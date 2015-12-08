@@ -1,13 +1,6 @@
 plotbox package
 ===============
 
-Subpackages
------------
-
-.. toctree::
-
-    plotbox.utils
-
 Submodules
 ----------
 
@@ -16,6 +9,7 @@ Submodules
    plotbox.iplot
    plotbox.movie
    plotbox.plot
+   plotbox.utils
 
 Module contents
 ---------------

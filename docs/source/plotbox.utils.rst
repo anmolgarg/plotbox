@@ -1,15 +1,5 @@
-plotbox.utils package
-=====================
-
-Submodules
-----------
-
-.. toctree::
-
-   plotbox.utils.date
-
-Module contents
----------------
+plotbox.utils module
+====================
 
 .. automodule:: plotbox.utils
     :members:
