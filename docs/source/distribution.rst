@@ -15,6 +15,7 @@ Versioning is handled manually in plotbox. We follow the rules of `semantic vers
 1. Run setup
 2. Create sdist and bdist_wheel distributions
 3. Use twine to upload to pypi and skip any existing build
+
 Note: You must update version before uploading to pypi
 
 .. code:: sh
@@ -28,7 +29,7 @@ Note: You must update version before uploading to pypi
 ---------------------------------------
 
 1. Run setup
-2. Cd docs/ and run makehtml to build modules rst files
+2. Cd docs/ and run makehtml to build modules rst files and build html locally (optional)
 3. Commit and push to github for readthedocs to update
 
 .. code:: sh
