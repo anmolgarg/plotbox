@@ -20,21 +20,34 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('../../plotbox'))
 
-# Mock some things for READTHEDOCS because rtd can't build things that depend on C
-# this code grabbed from http://read-the-docs.readthedocs.org/en/latest/faq.html
-from mock import Mock as MagicMock
 
-class Mock(MagicMock):
-    @classmethod
-    def __getattr__(cls, name):
-        return Mock()
+# -- READTHEDOCS configuration ------------------------------------------------
 
-MOCK_MODULES = ['numpy', 
-                'pandas', 
-                'matplotlib', 'matplotlib.pyplot', 
-                'seaborn', 
-                'plotly', 'plotly.plotly', 'plotly.graph_objs']
-sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
+# on_rtd is whether we are on readthedocs.org
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if on_rtd:
+    # Mock some things because RTD can't build things that depend on C
+    # this code grabbed from http://read-the-docs.readthedocs.org/en/latest/faq.html
+    from mock import Mock as MagicMock
+
+    class Mock(MagicMock):
+        @classmethod
+        def __getattr__(cls, name):
+            return Mock()
+
+    MOCK_MODULES = ['numpy', 
+                    'pandas', 
+                    'matplotlib', 'matplotlib.pyplot', 
+                    'seaborn', 
+                    'plotly', 'plotly.plotly', 'plotly.graph_objs']
+    sys.modules.update((module_name, Mock()) for module_name in MOCK_MODULES)
+
+else:
+    # use RTD theme locally
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 
 # -- General configuration ------------------------------------------------
@@ -223,6 +236,7 @@ html_static_path = ['_static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'plotboxdoc'
 
+
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
@@ -303,17 +317,3 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
-
-
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
-
-
-# use READTHEDOCS theme locally
-# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
-if not on_rtd:  # only import and set the theme if we're building docs locally
-    import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
