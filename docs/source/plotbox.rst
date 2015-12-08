@@ -6,9 +6,9 @@ Submodules
 
 .. toctree::
 
+   plotbox.plot
    plotbox.iplot
    plotbox.movie
-   plotbox.plot
    plotbox.utils
 
 Module contents
