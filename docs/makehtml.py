@@ -22,7 +22,7 @@ def main():
         os.system('sphinx-quickstart')
 
     # sphinx-apidoc -o <output_path> <module_path>
-    os.system('sphinx-apidoc -o ./source ../'+repopath)
+    os.system('sphinx-apidoc -ef -o ./source ../'+repopath)
     os.system('make html')
 
 if __name__ == '__main__':

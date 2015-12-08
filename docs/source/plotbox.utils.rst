@@ -4,14 +4,9 @@ plotbox.utils package
 Submodules
 ----------
 
-plotbox.utils.date module
--------------------------
+.. toctree::
 
-.. automodule:: plotbox.utils.date
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+   plotbox.utils.date
 
 Module contents
 ---------------

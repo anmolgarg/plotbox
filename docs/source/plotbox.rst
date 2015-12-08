@@ -11,30 +11,11 @@ Subpackages
 Submodules
 ----------
 
-plotbox.iplot module
---------------------
+.. toctree::
 
-.. automodule:: plotbox.iplot
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-plotbox.movie module
---------------------
-
-.. automodule:: plotbox.movie
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-plotbox.plot module
--------------------
-
-.. automodule:: plotbox.plot
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+   plotbox.iplot
+   plotbox.movie
+   plotbox.plot
 
 Module contents
 ---------------
