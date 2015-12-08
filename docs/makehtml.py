@@ -21,6 +21,7 @@ def main():
     if os.path.exists('./source') == False:
         os.system('sphinx-quickstart')
 
+    # http://sphinx-doc.org/man/sphinx-apidoc.html
     # sphinx-apidoc -o <output_path> <module_path>
     os.system('sphinx-apidoc -ef -o ./source ../'+repopath)
     os.system('make html')
