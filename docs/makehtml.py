@@ -4,7 +4,7 @@ import os
 import shutil
 
 def clean():
-    ''' Clean out current /build, source/modules.rst, and package*.rst(s) 
+    ''' Clean out current /build, source/modules.rst, and all package*.rst(s) 
 
     '''
     if os.path.exists('./build'):
@@ -22,6 +22,7 @@ def main():
         os.system('sphinx-quickstart')
 
     # http://sphinx-doc.org/man/sphinx-apidoc.html
+    # -f to force overwrite, -e to put modules on separate pages
     # sphinx-apidoc -o <output_path> <module_path>
     os.system('sphinx-apidoc -ef -o ./source ../'+repopath)
     os.system('make html')
