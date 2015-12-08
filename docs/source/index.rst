@@ -13,7 +13,7 @@ Contents
 ^^^^^^^^^
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 5
    
    installation
    modules
