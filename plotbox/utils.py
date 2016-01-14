@@ -9,6 +9,23 @@ def get_config():
     config = plotly.tools.get_config_file()
     return cred, config
 
+def hide_input_cells():
+    from IPython.display import HTML
+    return HTML('''<script>
+    code_show=true; 
+    function code_toggle() {
+     if (code_show){
+     $('div.input').hide();
+     } else {
+     $('div.input').show();
+     }
+     code_show = !code_show
+    } 
+    $( document ).ready(code_toggle);
+    </script>
+    The raw code for this IPython notebook is by default hidden for easier reading.
+    To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>.''')
+    
 def df_to_arrays(df, cols):
     '''function to easily convert data types
     Takes a df and a list of column names, returns a list of arrays in same order
