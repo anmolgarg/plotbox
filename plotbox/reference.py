@@ -2,6 +2,7 @@
 
 '''
 
+#full set of 255 colors used for the viridis color map
 _viridis_data = [[0.267004, 0.004874, 0.329415],
                  [0.268510, 0.009605, 0.335427],
                  [0.269944, 0.014625, 0.341379],
